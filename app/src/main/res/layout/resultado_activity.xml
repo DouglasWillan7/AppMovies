@@ -42,7 +42,6 @@
                 android:id="@+id/nome_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="nome"
                 android:textSize="15sp" />
 
             <TextView
@@ -58,7 +57,6 @@
                 android:id="@+id/lancamento_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="lancamento"
                 android:textSize="15sp" />
 
             <TextView
@@ -74,7 +72,6 @@
                 android:id="@+id/diretor_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="diretor"
                 android:textSize="15sp" />
 
             <TextView
@@ -90,7 +87,6 @@
                 android:id="@+id/tempo_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="tempo"
                 android:textSize="15sp" />
 
             <TextView
@@ -106,7 +102,6 @@
                 android:id="@+id/nota_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="nota"
                 android:textSize="15sp" />
 
             <TextView
@@ -122,7 +117,6 @@
                 android:id="@+id/atores_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="atores"
                 android:textSize="15sp" />
 
             <TextView
@@ -138,7 +132,6 @@
                 android:id="@+id/producao_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="producao"
                 android:textSize="15sp" />
 
             <TextView
@@ -155,7 +148,6 @@
                 android:layout_width="361dp"
                 android:layout_height="147dp"
                 android:layout_alignParentEnd="true"
-                android:text="sinopse"
                 android:textAlignment="viewStart" />
         </LinearLayout>
     </ScrollView>

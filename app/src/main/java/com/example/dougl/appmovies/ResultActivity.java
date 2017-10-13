@@ -1,10 +1,12 @@
 package com.example.dougl.appmovies;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -19,7 +21,7 @@ import org.json.JSONObject;
 public class ResultActivity extends AppCompatActivity {
 
     RequestQueue rq;
-
+    Context context;
     TextView nomer, lancamentor, diretorr, tempor, notar, atoresr, producaor, sinopser;
 
 
@@ -41,11 +43,7 @@ public class ResultActivity extends AppCompatActivity {
 
         String txt = bundle.getString("txt");
 
-        url+= txt;
-        Log.d("txt",txt);
-        Log.d("txt url", url);
-
-
+        url += txt;
 
         rq = Volley.newRequestQueue(this);
 
@@ -61,12 +59,13 @@ public class ResultActivity extends AppCompatActivity {
         sendjsonrequest();
     }
 
-    public void sendjsonrequest(){
+    public void sendjsonrequest() {
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 
                 try {
+
                     title = response.getString("Title");
                     released = response.getString("Released");
                     diretor = response.getString("Director");
@@ -86,11 +85,10 @@ public class ResultActivity extends AppCompatActivity {
                     producaor.setText(production);
                     sinopser.setText(plot);
 
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
-
 
 
             }
