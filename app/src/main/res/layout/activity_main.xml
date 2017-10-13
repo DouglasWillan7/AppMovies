@@ -2,181 +2,43 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/btn_buscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Buscar" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digite o nome do filme:"
+        android:textSize="16sp"
+        android:layout_below="@+id/titulo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp" />
+
     <TextView
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:text="INFORMAÇÕES"
-        android:textAlignment="textStart"
+        android:text="Bem Vindo"
         android:textAllCaps="true"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textSize="40sp"
+        android:textSize="36sp"
         android:textStyle="bold"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp" />
 
-    <TextView
-        android:id="@+id/nome"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nome:"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginTop="68dp"
-        android:layout_below="@+id/titulo"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="7dp" />
-
-    <TextView
-        android:id="@+id/nome_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/nome"
-        android:layout_marginStart="81dp"
-        android:layout_toEndOf="@+id/nome"
-        android:text="nome"
-        android:textSize="15sp" />
-
-    <TextView
-        android:id="@+id/lancamento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/nome"
-        android:layout_below="@+id/nome"
-        android:layout_marginTop="14dp"
-        android:text="Lançamento:"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/lancamento_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="lancamento"
-        android:textSize="15sp"
-        android:layout_alignBottom="@+id/lancamento"
-        android:layout_alignStart="@+id/tempo_result" />
-
-    <TextView
-        android:id="@+id/diretor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/lancamento"
-        android:layout_below="@+id/lancamento"
-        android:layout_marginTop="15dp"
-
-        android:text="Diretor:"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/diretor_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="diretor"
-        android:textSize="15sp"
-        android:layout_above="@+id/tempo_de_filme"
-        android:layout_toEndOf="@+id/nome_result" />
-
-    <TextView
-        android:id="@+id/tempo_de_filme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/diretor"
-        android:layout_below="@+id/diretor"
-        android:layout_marginTop="21dp"
-        android:text="Tempo de Filme:"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/tempo_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="tempo"
-        android:textSize="15sp"
-        android:layout_alignBottom="@+id/tempo_de_filme"
-        android:layout_alignEnd="@+id/diretor_result" />
-
-    <TextView
-        android:id="@+id/nota_imdb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/tempo_de_filme"
-        android:layout_below="@+id/tempo_de_filme"
-        android:layout_marginTop="16dp"
-        android:text="Nota IMDB:"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/nota_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/nota_imdb"
-        android:layout_alignStart="@+id/tempo_result"
-        android:text="nota"
-        android:textSize="15sp" />
-
-    <TextView
-        android:id="@+id/atores"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/diretor"
-        android:layout_below="@+id/nota_imdb"
-        android:layout_marginTop="13dp"
-        android:text="Atores:"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/atores_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/atores"
-        android:layout_alignEnd="@+id/tempo_result"
-        android:text="atores"
-        android:textSize="15sp" />
-
-    <TextView
-        android:id="@+id/producao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/atores"
-        android:layout_below="@+id/atores"
-        android:layout_marginTop="15dp"
-        android:text="Produção:"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/producao_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/producao"
-        android:layout_alignBottom="@+id/producao"
-        android:layout_alignStart="@+id/atores_result"
-        android:text="producao"
-        android:textSize="15sp" />
-
-    <TextView
-        android:id="@+id/sinopse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/nota_imdb"
-        android:layout_below="@+id/producao"
-        android:layout_marginTop="9dp"
-        android:text="Sinopse:"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/sinopse_result"
-        android:layout_width="361dp"
-        android:layout_height="147dp"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/sinopse"
-        android:text="sinopse"
-        android:textAlignment="viewStart" />
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        android:layout_above="@+id/btn_buscar" />
 </RelativeLayout>
