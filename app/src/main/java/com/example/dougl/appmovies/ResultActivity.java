@@ -1,8 +1,7 @@
 package com.example.dougl.appmovies;
 
-import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -15,12 +14,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * Created by dougl on 12/10/2017.
- */
-
-public class ResultadoActivity extends Activity {
-
+public class ResultActivity extends AppCompatActivity {
 
     RequestQueue rq;
 
@@ -32,10 +26,11 @@ public class ResultadoActivity extends Activity {
 
     String url = "http://www.omdbapi.com/?apikey=86c36815&t=frozen";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.resultado_activity);
 
         rq = Volley.newRequestQueue(this);
 
