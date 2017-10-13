@@ -1,7 +1,9 @@
 package com.example.dougl.appmovies;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -24,13 +26,26 @@ public class ResultActivity extends AppCompatActivity {
     String title, released, diretor, runtime, imdbrating, actors, production, plot;
 
 
-    String url = "http://www.omdbapi.com/?apikey=86c36815&t=frozen";
+    String url = "http://www.omdbapi.com/?apikey=86c36815&t=";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.resultado_activity);
+
+
+        Intent intent = getIntent();
+
+        Bundle bundle = intent.getExtras();
+
+        String txt = bundle.getString("txt");
+
+        url+= txt;
+        Log.d("txt",txt);
+        Log.d("txt url", url);
+
+
 
         rq = Volley.newRequestQueue(this);
 
